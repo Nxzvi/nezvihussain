@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, LayoutGrid, Award, FolderHeart, MailOpen, Lock, LogOut, CheckCircle, Trash2, Edit3, Plus, X } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 
 export default function AdminDashboard({ token, setToken, onDataUpdate }) {
   const [username, setUsername] = useState('');
@@ -38,20 +39,20 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
     try {
       const headers = { 'Authorization': `Bearer ${token}` };
       
-      const pRes = await fetch('http://localhost:5000/api/profile');
+      const pRes = await fetch(`${API_BASE_URL}/api/profile`);
       const profileData = await pRes.json();
       setProfile(profileData);
       setProfileForm(profileData);
 
-      const sRes = await fetch('http://localhost:5000/api/skills');
+      const sRes = await fetch(`${API_BASE_URL}/api/skills`);
       const skillsData = await sRes.json();
       setSkills(skillsData);
 
-      const prRes = await fetch('http://localhost:5000/api/projects');
+      const prRes = await fetch(`${API_BASE_URL}/api/projects`);
       const projectsData = await prRes.json();
       setProjects(projectsData);
 
-      const mRes = await fetch('http://localhost:5000/api/messages', { headers });
+      const mRes = await fetch(`${API_BASE_URL}/api/messages`, { headers });
       if (mRes.ok) {
         const messagesData = await mRes.json();
         setMessages(messagesData);
@@ -66,7 +67,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
     e.preventDefault();
     setLoginError('');
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -95,7 +96,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/profile', {
+      const response = await fetch(`${API_BASE_URL}/api/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -123,8 +124,8 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
     setLoading(true);
     const method = editingSkill ? 'PUT' : 'POST';
     const url = editingSkill 
-      ? `http://localhost:5000/api/skills/${editingSkill}`
-      : 'http://localhost:5000/api/skills';
+      ? `${API_BASE_URL}/api/skills/${editingSkill}`
+      : `${API_BASE_URL}/api/skills`;
 
     try {
       const response = await fetch(url, {
@@ -154,7 +155,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
   const handleDeleteSkill = async (id) => {
     if (!window.confirm('Delete this skill?')) return;
     try {
-      const response = await fetch(`http://localhost:5000/api/skills/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/skills/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -174,8 +175,8 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
     setLoading(true);
     const method = editingProject ? 'PUT' : 'POST';
     const url = editingProject 
-      ? `http://localhost:5000/api/projects/${editingProject}`
-      : 'http://localhost:5000/api/projects';
+      ? `${API_BASE_URL}/api/projects/${editingProject}`
+      : `${API_BASE_URL}/api/projects`;
 
     const finalForm = {
       ...projectForm,
@@ -212,7 +213,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
   const handleDeleteProject = async (id) => {
     if (!window.confirm('Delete this project?')) return;
     try {
-      const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/projects/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -229,7 +230,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
   // --- Messages Actions ---
   const handleMarkRead = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/messages/${id}/read`, {
+      const response = await fetch(`${API_BASE_URL}/api/messages/${id}/read`, {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -245,7 +246,7 @@ export default function AdminDashboard({ token, setToken, onDataUpdate }) {
   const handleDeleteMessage = async (id) => {
     if (!window.confirm('Delete this message?')) return;
     try {
-      const response = await fetch(`http://localhost:5000/api/messages/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/messages/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });

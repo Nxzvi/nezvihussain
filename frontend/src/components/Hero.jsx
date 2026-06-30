@@ -111,23 +111,41 @@ export default function Hero({ profile }) {
         <div style={{ flex: '1 1 45%', minWidth: '350px', position: 'relative', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
           
           <div style={{ position: 'relative', marginRight: '20px' }}>
-            <img 
-              src="/bright_galaxy_user_profile.png" 
-              alt="Nezvi Hussain" 
-              style={{
-                width: '320px',
-                height: '320px',
-                borderRadius: '24px', 
-                border: '1px solid rgba(176, 38, 255, 0.3)',
-                objectFit: 'cover',
-                boxShadow: '0 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(176, 38, 255, 0.1)',
-                transition: 'var(--transition)',
-                transform: 'rotate(2deg)',
-                background: 'var(--bg-card)'
-              }}
-              onMouseOver={(e) => { e.currentTarget.style.transform = 'rotate(0deg) scale(1.02)'; e.currentTarget.style.boxShadow = '0 25px 60px rgba(0,0,0,0.8), 0 0 60px rgba(176, 38, 255, 0.2)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.transform = 'rotate(2deg)'; e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,0,0,0.6), 0 0 40px rgba(176, 38, 255, 0.1)'; }}
-            />
+            <div style={{
+              position: 'relative',
+              width: '320px',
+              height: '320px',
+              borderRadius: '50%',
+              padding: '5px',
+              background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+              boxShadow: '0 0 30px rgba(176, 38, 255, 0.25), 0 0 50px rgba(0, 229, 255, 0.15)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'var(--transition)',
+              marginRight: '20px'
+            }}
+            onMouseOver={(e) => { 
+              e.currentTarget.style.transform = 'translateY(-6px) scale(1.02)';
+              e.currentTarget.style.boxShadow = '0 0 45px rgba(176, 38, 255, 0.45), 0 0 75px rgba(0, 229, 255, 0.25)';
+            }}
+            onMouseOut={(e) => { 
+              e.currentTarget.style.transform = 'translateY(0) scale(1)';
+              e.currentTarget.style.boxShadow = '0 0 30px rgba(176, 38, 255, 0.25), 0 0 50px rgba(0, 229, 255, 0.15)';
+            }}
+            >
+              <img 
+                src="/bright_galaxy_user_profile.png" 
+                alt="Nezvi Hussain" 
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+              />
+            </div>
             
             {/* Floating Content Card 1 */}
             <div style={{

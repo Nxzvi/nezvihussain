@@ -1,0 +1,217 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "$2a$10$ygQnIpUWmLjsHkmI3.yYiuKhoKrnznVDu9kOH5sc9voP.K7EIfiaO",
+    "fullName": "Nezvi Hussain K H",
+    "email": "nezvihussain00@gmail.com",
+    "phone": "+91 9567318992",
+    "location": "Thrissur, Kerala, India",
+    "github": "https://github.com/nxzvi",
+    "linkedin": "https://linkedin.com/in/nezvihussain",
+    "aboutText": "DevOps and Cloud Engineer with hands-on experience in Linux server administration, AWS infrastructure, Docker, Kubernetes, Terraform, and CI/CD automation. Also skilled as a SOC Analyst with expertise in SIEM monitoring, alert triage, and incident response using Wazuh and MITRE ATT&CK. Experienced in containerized deployments, reverse proxy configuration, PostgreSQL management, and real-time threat detection. Passionate about scalable systems, cloud-native technologies, and production-grade security.",
+    "roleText": "DevOps Engineer • SOC Analyst • Cloud & Security",
+    "experience": [
+      {
+        "company": "McMillan Technologies and Consultancy Services Pvt Ltd",
+        "role": "DevOps Engineer",
+        "period": "Recent",
+        "highlights": [
+          "Deployed and maintained containerized applications using Docker in Linux environments.",
+          "Configured Nginx reverse proxy with SSL termination and domain routing for hosted applications.",
+          "Troubleshot PostgreSQL connectivity issues, caching problems, upload limitations, and deployment-related errors.",
+          "Managed Linux servers for application deployments, monitoring services, debugging logs, and resolving deployment failures.",
+          "Worked with AWS infrastructure components including EC2 provisioning, VPC networking, RDS management, and CloudFront CDN configuration."
+        ]
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Penetration Tester",
+        "issuer": "RedTeam Hacker Academy",
+        "icon": "fas fa-shield-halved"
+      },
+      {
+        "name": "Programming Essentials in Python",
+        "issuer": "Cisco Networking Academy",
+        "icon": "fab fa-python"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Technology in Computer Science and Engineering",
+        "institution": "Universal Engineering College, Vallivattom",
+        "university": "APJ Abdul Kalam Technological University, Kerala, India",
+        "period": "Nov 2020 – June 2024",
+        "topics": "Java, C, SQL"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "1",
+      "name": "Linux",
+      "category": "DevOps",
+      "icon": "devicon-linux-plain colored",
+      "level": "Expert"
+    },
+    {
+      "id": "2",
+      "name": "Docker",
+      "category": "DevOps",
+      "icon": "devicon-docker-plain colored",
+      "level": "Expert"
+    },
+    {
+      "id": "3",
+      "name": "Kubernetes",
+      "category": "DevOps",
+      "icon": "devicon-kubernetes-plain colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "4",
+      "name": "Terraform",
+      "category": "DevOps",
+      "icon": "devicon-terraform-plain colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "5",
+      "name": "AWS",
+      "category": "Cloud",
+      "icon": "devicon-amazonwebservices-original colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "6",
+      "name": "Nginx",
+      "category": "DevOps",
+      "icon": "devicon-nginx-original colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "7",
+      "name": "Git",
+      "category": "DevOps",
+      "icon": "devicon-git-plain colored",
+      "level": "Expert"
+    },
+    {
+      "id": "8",
+      "name": "GitHub Actions",
+      "category": "DevOps",
+      "icon": "devicon-github-original colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "9",
+      "name": "Python",
+      "category": "Programming",
+      "icon": "devicon-python-plain colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "10",
+      "name": "Bash",
+      "category": "Programming",
+      "icon": "devicon-bash-plain colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "11",
+      "name": "PostgreSQL",
+      "category": "Databases",
+      "icon": "devicon-postgresql-plain colored",
+      "level": "Advanced"
+    },
+    {
+      "id": "12",
+      "name": "MySQL",
+      "category": "Databases",
+      "icon": "devicon-mysql-original colored",
+      "level": "Intermediate"
+    },
+    {
+      "id": "13",
+      "name": "Wazuh SIEM",
+      "category": "Security",
+      "icon": "fas fa-shield-halved",
+      "level": "Advanced"
+    },
+    {
+      "id": "14",
+      "name": "Splunk",
+      "category": "Security",
+      "icon": "fas fa-chart-bar",
+      "level": "Intermediate"
+    },
+    {
+      "id": "15",
+      "name": "Kali Linux",
+      "category": "Security",
+      "icon": "fas fa-terminal",
+      "level": "Intermediate"
+    },
+    {
+      "id": "16",
+      "name": "MITRE ATT&CK",
+      "category": "Security",
+      "icon": "fas fa-crosshairs",
+      "level": "Advanced"
+    },
+    {
+      "id": "17",
+      "name": "OWASP Top 10",
+      "category": "Security",
+      "icon": "fas fa-bug",
+      "level": "Advanced"
+    },
+    {
+      "id": "18",
+      "name": "Jenkins",
+      "category": "DevOps",
+      "icon": "devicon-jenkins-line colored",
+      "level": "Intermediate"
+    },
+    {
+      "id": "19",
+      "name": "n8n",
+      "category": "DevOps",
+      "icon": "fas fa-project-diagram",
+      "level": "Advanced"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Website Hosting on AWS",
+      "description": "Deployed and hosted a Node.js web application on AWS EC2 using Linux-based infrastructure. Provisioned infrastructure using Terraform for repeatable and automated environment setup. Automated Docker image build, vulnerability scanning using Trivy, and deployed to EC2 instance. Managed secure remote access using SSH and AWS Security Groups. Implemented static asset delivery using AWS S3 and CloudFront CDN to reduce latency.",
+      "technologies": ["AWS EC2", "S3", "CloudFront", "Terraform", "Linux", "Nginx", "Docker", "Trivy"],
+      "githubUrl": "https://github.com/nxzvi",
+      "liveUrl": "",
+      "category": "Cloud",
+      "image": ""
+    },
+    {
+      "id": "2",
+      "title": "Containerized Application Platform",
+      "description": "Built Docker-based application environments with PostgreSQL backend services. Created Kubernetes deployments using YAML manifests and managed container networking and persistent storage. Performed container vulnerability scanning using Trivy to identify security issues in Docker images. Troubleshot deployment issues related to caching, container services, and database connectivity.",
+      "technologies": ["Docker", "Kubernetes", "PostgreSQL", "Trivy", "Linux", "YAML"],
+      "githubUrl": "https://github.com/nxzvi",
+      "liveUrl": "",
+      "category": "DevOps",
+      "image": ""
+    },
+    {
+      "id": "3",
+      "title": "SOC Lab & Threat Detection using Wazuh SIEM",
+      "description": "Deployed and configured Wazuh SIEM in a virtualized lab environment with Windows endpoints. Installed and managed Wazuh agents, validating successful log collection and ingestion. Monitored authentication, process creation, and network activity logs to identify suspicious behavior. Detected brute-force login attempts, reconnaissance activity, and anomalous endpoint events. Investigated alerts using Wazuh dashboards and correlated findings with MITRE ATT&CK techniques. Performed basic incident response including alert triage, log analysis, and escalation procedures.",
+      "technologies": ["Wazuh SIEM", "MITRE ATT&CK", "Linux", "Windows", "Log Analysis", "Incident Response"],
+      "githubUrl": "https://github.com/nxzvi",
+      "liveUrl": "",
+      "category": "Security",
+      "image": ""
+    }
+  ],
+  "messages": []
+}

@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import AdminDashboard from './components/AdminDashboard';
 import GalaxyBackground from './components/GalaxyBackground';
 import { Terminal } from 'lucide-react';
+import { API_BASE_URL } from './config';
 
 export default function App() {
   const [view, setView] = useState('home'); // 'home' or 'admin'
@@ -26,19 +27,19 @@ export default function App() {
       setError(null);
 
       // Fetch Profile
-      const profileResponse = await fetch('http://localhost:5000/api/profile');
+      const profileResponse = await fetch(`${API_BASE_URL}/api/profile`);
       if (!profileResponse.ok) throw new Error('Failed to load profile details');
       const profileData = await profileResponse.json();
       setProfile(profileData);
 
       // Fetch Skills
-      const skillsResponse = await fetch('http://localhost:5000/api/skills');
+      const skillsResponse = await fetch(`${API_BASE_URL}/api/skills`);
       if (!skillsResponse.ok) throw new Error('Failed to load skills list');
       const skillsData = await skillsResponse.json();
       setSkills(skillsData);
 
       // Fetch Projects
-      const projectsResponse = await fetch('http://localhost:5000/api/projects');
+      const projectsResponse = await fetch(`${API_BASE_URL}/api/projects`);
       if (!projectsResponse.ok) throw new Error('Failed to load projects list');
       const projectsData = await projectsResponse.json();
       setProjects(projectsData);
@@ -141,7 +142,7 @@ export default function App() {
           <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
             <p>© {new Date().getFullYear()} {profile.fullName || 'Nezvi Hussain'}. All rights reserved.</p>
             <p style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              <Terminal size={12} /> Powered by MERN Stack
+              <Terminal size={12} /> Powered by Nxz
             </p>
           </div>
         </footer>
