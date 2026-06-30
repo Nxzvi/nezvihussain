@@ -20,14 +20,22 @@ app.use(cors({
 app.use(express.json());
 
 // ── Wire up routes immediately so Vercel can find them ────────────────────────
-// DB connection is handled lazily inside each db.* call
 connectDatabase(); // fire-and-forget; idempotent — mongoose caches the connection
 
-app.use('/api', router);
+// Root status route
+app.get('/', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: 'Nezvi Hussain Portfolio API is running 🚀',
+    endpoints: ['/health', '/api/profile', '/api/skills', '/api/projects'],
+  });
+});
 
 app.get('/health', (req, res) => {
-  res.json({ status: 'OK' });
+  res.json({ status: 'OK', message: 'Server is healthy' });
 });
+
+app.use('/api', router);
 
 // ── Local dev: start the HTTP server only when run directly ───────────────────
 if (require.main === module) {
